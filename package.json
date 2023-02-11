@@ -1,0 +1,17 @@
+{
+  "name": "LibraryOOP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build/ && tsc",
+    "start": "node build/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.9.5",
+    "uuid": "^9.0.0"
+  }
+}

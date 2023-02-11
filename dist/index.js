@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const book_class_1 = require("./classes/book.class");
+const library_class_1 = require("./classes/library.class");
+const rentee_class_1 = require("./classes/rentee.class");
+const addRenteeId_1 = require("./utils/addRenteeId");
+const library = new library_class_1.Library();
+const book1 = new book_class_1.Book("The Great Gatsby", "F. Scott Fitzgerald", "12345", 1925, 207);
+const book2 = new book_class_1.Book("Moby Dick", "Herman Melville", "67890", 1851, 570);
+const rentee1 = new rentee_class_1.Rentee((0, addRenteeId_1.addId)(), "Tom");
+const rentee2 = new rentee_class_1.Rentee((0, addRenteeId_1.addId)(), "Willem");
+library.addBook(book1);
+library.addBook(book2);
+library.addRentee(rentee1);
+library.addRentee(rentee2);
+library.checkOut(book2.isbn, rentee1.name);
